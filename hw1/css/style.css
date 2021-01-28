@@ -1,0 +1,18 @@
+input {
+  border: 2px solid black;
+  outline: none;
+  padding: 4px;
+  transition: all .2s;
+  background-color: #0d165a;
+  color: wheat;
+}
+
+input:hover {
+  cursor: pointer;
+  background-color: #c80cc8;
+}
+
+div {
+  transition: background-color .5s;
+}
+/*# sourceMappingURL=style.css.map */

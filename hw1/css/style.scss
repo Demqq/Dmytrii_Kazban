@@ -1,0 +1,16 @@
+input {
+    border: 2px solid black;
+    outline: none;
+    padding: 4px;
+    transition: all .2s;
+    background-color: rgb(13, 22, 90);
+    color: wheat;
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(200, 12, 200);
+    }
+}
+
+div {
+    transition:  background-color .5s;
+}
