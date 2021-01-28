@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrap" id="app"></div>
+
+    <script>
+        /*
+      Задание:
+      Сложить в элементе с id App следующую размету HTML:
+
+      <header>
+        <a href="http://google.com.ua">
+          <img src="https://www.google.com.ua/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+        </a>
+        <div class="menu">
+          <a href="#1"> link 1</a>
+          <a href="#1"> link 2</a>
+          <a href="#1"> link 3</a>
+        </div>
+      </header>
+
+      Используя следующие методы для работы:
+      getElementById
+      createElement
+      element.innerText
+      element.className
+      element.setAttribute
+      element.appendChild
+
+  */
+
+        let app = document.getElementById('app');
+        let header = document.createElement('header');
+        let link = document.createElement('a');
+            link.href = "http://google.com.ua";
+            link.innerText = 'google.com.ua';
+        let image = document.createElement('img');
+            image.src = "https://www.google.com.ua/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png";
+        let div = document.createElement('div');
+            div.className = 'menu';
+        let divLink = document.createElement('a');
+            divLink.href = '#1';
+            divLink.innerText = "link 1";
+        let divLink2 = document.createElement('a');
+            divLink2.href = '#1';
+            divLink2.innerText = "link 2";
+        let divLink3 = document.createElement('a');
+            divLink3.href = '#1';
+            divLink3.innerText = "link 3";
+
+        
+        app.appendChild(header);
+        header.appendChild(link);
+        link.appendChild(image);
+        header.appendChild(div);
+        div.appendChild(divLink);
+        div.appendChild(divLink2);
+        div.appendChild(divlink3);
+
+    </script>
+</body>
+
+</html>
