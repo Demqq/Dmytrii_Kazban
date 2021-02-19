@@ -45,11 +45,11 @@ if (counter >= OurSliderImages.length - 1){
 });
 
 btnPrev.addEventListener('click', function(){
-  counter--;
-  image.src = OurSliderImages[counter];
-  slider.appendChild(image)
   if (counter <= 0){
     counter = OurSliderImages.length - 1;
   }
+  counter--;
+  image.src = OurSliderImages[counter];
+  slider.appendChild(image)
   });
 
