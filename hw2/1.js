@@ -48,14 +48,16 @@ btns.forEach(e => {
 
 function changeTab() {
   let btnAttribute = this.getAttribute("data-tab");
+  console.log(btnAttribute);
+  // hideAllTabs();
   for (i = 0; i < tabs.length; i++) {
     tabs[btnAttribute - 1].classList.toggle("active");
   }
 }
 
-// function hideAllTabs() {
-//   var activeTags = document.querySelectorAll(".active");
-//   for (i = 0; i < tabs.length; i++) {
-//     activeTags.classList.remove(".active");
-//   }
-// }
+function hideAllTabs() {
+  var activeTags = document.querySelectorAll(".active");
+  for (i = 0; i < tabs.length; i++) {
+    activeTags.classList.remove(".active");
+  }
+}
