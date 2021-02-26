@@ -78,7 +78,6 @@ function anotherComments(myComments) {
         comment.likesIncreaser();
         block.querySelector('.like').innerHTML = comment.likes;
       })
-
       commentsContainer.appendChild(block);      
     })
   }
