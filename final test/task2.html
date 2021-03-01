@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Forms Task 1</title>
+  <script>
+    /*
+      Задание:
+        Сделать валидацию формы:
+        1. Логин / Пароль не может быть пустым
+        2. то поле, которое не прошло валидацию подсвечивать красным, которое прошло - подсвечивать зеленым.
+        3. Пока не стоит что юзер согласен с лиц. соглашением - кнопка отправки не активна
+    */
+  </script>
+</head>
+
+<body>
+  <form id="MyValidateForm">
+    <input type="text" name='login' id="login" placeholder="Ваш логин" />
+    <input type="password" name='pas1' id="pas1" placeholder="Ваш пароль" />
+    <input type="password" name='pas2' id="pas2" placeholder="Повторите пароль" />
+    <label for="agree">
+      <span>Вы согласны с лицензионым соглашением.</span>
+      <input type="checkbox" id="agree" />
+    </label>
+    <input type="submit" id="submit" value="Отправить" disabled />
+  </form>
+
+  <style>
+    #MyValidateForm {
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #MyValidateForm input {
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      padding: 10px 20px;
+    }
+
+    .error {
+      border: 1px solid red;
+    }
+
+    .OK {
+      border: 1px solid green;
+    }
+  </style>
+
+  <script>
+    let ourForm = document.querySelector('#MyValidateForm');
+
+    ourForm.submit.addEventListener('click', function () {
+      if (ourForm.login.value.length === '') {
+        alert("Please, write down you Name or password")
+        ourForm.login.classList.add('error')
+      } else if (ourForm.pas1.value === '') {
+        alert("Please, write down you Name or password");
+      } else if (ourForm.pas2.value == "") {
+        alert("Please, write down you Name or password");
+      } else if (ourForm.pas1.value !== ourForm.pas2.value) {
+        alert("Yours passwords have to be matched");
+      } else {
+        alert("thank you, " + ourForm.login.value);
+      }
+    });
+
+    ourForm.agree.addEventListener('click', function(e){
+      if(e.target.checked){
+        ourForm.submit.removeAttribute('disabled');
+      }
+    });
+  </script>
+</body>
+</html>
+

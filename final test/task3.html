@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+            Задание 1:
+
+            Написать обьект Train у которого будут свойства:
+            -имя,
+            -скорость езды
+            -количество пассажиров
+            Методы:
+            Ехать -> Поезд {name} везет { количество пассажиров} со скоростью {speed}
+            Стоять -> Поезд {name} остановился. Скорость {speed}
+            Подобрать пассажиров -> Увеличивает кол-во пассажиров на Х
+        */
+
+        let x = 10;
+
+        let train = {
+            name: "piqle",
+            speed: 300,
+            countOfPassangers: 1000,
+            drive: function () {
+                console.log(this.name + "takes " + this.countOfPassangers + "passangers " + "with speed " + this.speed )
+            },
+            stay: function () {
+                console.log(this.name + "is stoped with speed " + this.speed * 0);
+            },
+
+            getPas: function (){
+                console.log("count of pass is raised to " + this.countOfPassangers * x);
+            }
+        }
+
+        console.log(train.drive());
+        console.log(train.stay());
+        console.log(train.getPas());
+
+    </script>
+</body>
+
+</html>
